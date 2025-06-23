@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet'
 import './App.css'
 
 // Import components
@@ -141,6 +142,19 @@ function App() {
         
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
           setActiveSection(sectionId);
+          
+          // Update page title based on active section
+          const sectionTitles = {
+            'hero': `${portfolioData.name} | Full-Stack Developer`,
+            'about': `About - ${portfolioData.name}`,
+            'skills': `Skills & Expertise - ${portfolioData.name}`,
+            'projects': `Portfolio Projects - ${portfolioData.name}`,
+            'publications': `Publications - ${portfolioData.name}`,
+            'certifications': `Certifications - ${portfolioData.name}`,
+            'contact': `Contact - ${portfolioData.name}`
+          };
+          
+          document.title = sectionTitles[sectionId] || `${portfolioData.name} | Portfolio`;
         }
       });
     };
@@ -149,7 +163,7 @@ function App() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [portfolioData.name]);
 
   // Smooth scroll to section
   const scrollToSection = (sectionId) => {
@@ -166,6 +180,55 @@ function App() {
   return (
     <ThemeProvider>
       <>
+        <Helmet>
+          <title>{portfolioData.name} | Full-Stack Developer Portfolio</title>
+          <meta name="description" content="Portfolio of Shubhodip Pal, a Full-Stack Developer specializing in Java, Spring Boot, MySQL, and React.js. View projects, skills, and certifications." />
+          <meta name="keywords" content="Shubhodip Pal, Full-Stack Developer, Java Developer, React Developer, Spring Boot, Portfolio, Web Development" />
+          <meta name="author" content={portfolioData.name} />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          
+          {/* Open Graph / Facebook */}
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://shubhodip.in/" />
+          <meta property="og:title" content={`${portfolioData.name} | Full-Stack Developer Portfolio`} />
+          <meta property="og:description" content="Portfolio of Shubhodip Pal, a Full-Stack Developer specializing in Java, Spring Boot, MySQL, and React.js." />
+          <meta property="og:image" content="https://shubhodip.in/thumbnail.jpg" />
+          
+          {/* Twitter */}
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content="https://shubhodip.in/" />
+          <meta property="twitter:title" content={`${portfolioData.name} | Full-Stack Developer Portfolio`} />
+          <meta property="twitter:description" content="Portfolio of Shubhodip Pal, a Full-Stack Developer specializing in Java, Spring Boot, MySQL, and React.js." />
+          <meta property="twitter:image" content="https://shubhodip.in/thumbnail.jpg" />
+          
+          {/* Canonical URL */}
+          <link rel="canonical" href="https://shubhodip.in/" />
+
+          {/* Structured Data - Person */}
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "http://schema.org",
+              "@type": "Person",
+              "name": portfolioData.name,
+              "jobTitle": portfolioData.title,
+              "description": portfolioData.about,
+              "email": portfolioData.contact.email,
+              "sameAs": [
+                portfolioData.contact.github,
+                portfolioData.contact.linkedin
+              ],
+              "knowsAbout": portfolioData.skills.map(skill => skill.name),
+              "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": portfolioData.education.institution
+              }
+            })}
+          </script>
+
+          {/* Google Site Verification */}
+          <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
+        </Helmet>
+
         {/* Navigation Component */}
         <Navigation 
           activeSection={activeSection} 

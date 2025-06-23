@@ -12,7 +12,11 @@ const Projects = ({ projects }) => {
           {projects.map(project => (
             <div key={project.id} className="project-card">
               <div className="project-image">
-                <img src={project.image} alt={project.title} />
+                <img 
+                  src={project.image} 
+                  alt={`${project.title} - ${project.technologies} project`} 
+                  loading="lazy" 
+                />
                 <div className="project-overlay">
                   <div className="project-buttons">
                     <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-btn github-btn">
