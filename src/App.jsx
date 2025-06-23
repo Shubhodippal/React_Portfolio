@@ -25,14 +25,14 @@ function App() {
     tagline: "Building robust applications with clean, efficient code",
     about: "Final-year Full-Stack Developer with a focus on Java, Spring Boot, MySQL, and React.js. Building projects involving RESTful APIs and interactive web interfaces. Comfortable with data structures and algorithms in Java and currently exploring machine learning to expand technical knowledge. Enthusiastic about clean code, backend efficiency, and continuous improvement.",
     skills: [
-      { name: "Java", level: 90 },
-      { name: "JavaScript", level: 85 },
-      { name: "React.js", level: 88 },
-      { name: "Spring Boot", level: 85 },
-      { name: "MySQL", level: 80 },
-      { name: "Python", level: 75 },
-      { name: "Git/GitHub", level: 85 },
-      { name: "Data Structures & Algorithms", level: 80 }
+      { name: "Java", level: 70 },
+      { name: "JavaScript", level: 45 },
+      { name: "React.js", level: 45 },
+      { name: "Spring Boot", level: 62 },
+      { name: "MySQL", level: 60 },
+      { name: "Python", level: 68 },
+      { name: "Git/GitHub", level: 62 },
+      { name: "Data Structures & Algorithms", level: 65 }
     ],
     projects: [
       {
@@ -41,6 +41,7 @@ function App() {
         description: "Developed a speech-emotion recognition system using the SUBESCO dataset and CNN, achieving 99.38% accuracy. Implemented efficient coding practices to handle large datasets and optimize model performance. This research was presented at the INDICON 2024 at IIT Kharagpur.",
         technologies: "Python, CNN, Deep Learning, Signal Processing",
         link: "https://github.com/Shubhodippal/Beyond_Words3.0.git",
+        website: "", // Add website link if available
         image: "/project-images/speech-emotion.jpg" // Local image path
       },
       {
@@ -49,6 +50,7 @@ function App() {
         description: "Developed a React/Spring Boot recipe application that uses Cohere API for AI-powered recipe generation from available ingredients. Built core features including recipe discovery with filtering options, smart grocery list management, and restaurant map integration.",
         technologies: "React, Spring Boot, Cohere API, REST APIs",
         link: "https://github.com/Shubhodippal/NutriSift.git",
+        website: "https://shubhodippal.github.io/NutriSift/", // Add website link if available
         image: nutrisift // Local image path
       },
       {
@@ -57,6 +59,7 @@ function App() {
         description: "Created a system for detecting cars and estimating their speed using OpenCV and YOLO, leveraging frame-based tracking for accuracy.",
         technologies: "Python, OpenCV, YOLO, Computer Vision",
         link: "https://github.com/Shubhodippal/Car-speed_detection_yolov8.git",
+        website: "", // Add website link if available
         image: "/project-images/car-detection.jpg" // Local image path
       }
     ],

@@ -6,6 +6,13 @@ const Skills = ({ skills, children }) => {
   const firstColumnSkills = skills.slice(0, halfwayPoint);
   const secondColumnSkills = skills.slice(halfwayPoint);
 
+  // Function to convert percentage to skill level text
+  const getSkillLevel = (percentage) => {
+    if (percentage >= 85) return "Advanced";
+    if (percentage >= 60) return "Intermediate";
+    return "Beginner";
+  };
+
   return (
     <section id="skills" className="section skills-section">
       <div className="section-container">
@@ -22,7 +29,7 @@ const Skills = ({ skills, children }) => {
               <div key={index} className="skill-bar">
                 <div className="skill-info">
                   <span className="skill-name">{skill.name}</span>
-                  <span className="skill-percentage">{skill.level}%</span>
+                  <span className="skill-percentage">{getSkillLevel(skill.level)}</span>
                 </div>
                 <div className="skill-progress-bg">
                   <div 
@@ -38,7 +45,7 @@ const Skills = ({ skills, children }) => {
               <div key={index} className="skill-bar">
                 <div className="skill-info">
                   <span className="skill-name">{skill.name}</span>
-                  <span className="skill-percentage">{skill.level}%</span>
+                  <span className="skill-percentage">{getSkillLevel(skill.level)}</span>
                 </div>
                 <div className="skill-progress-bg">
                   <div 
