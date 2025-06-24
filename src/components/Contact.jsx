@@ -13,6 +13,8 @@ const Contact = ({ contact }) => {
     subject: false,
     message: false
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,15 +31,43 @@ const Contact = ({ contact }) => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log(formData);
-    // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    setFocused({ name: false, email: false, subject: false, message: false });
-    // Show success message
-    alert('Message sent successfully!');
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    
+    try {
+      const response = await fetch('https://backend.shubhodip.in/users/send_mail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'X-API-KEY': import.meta.env.VITE_API_KEY
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message
+        }),
+      });
+      
+      if (response.ok) {
+        // Reset form
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setFocused({ name: false, email: false, subject: false, message: false });
+        setSubmitStatus('success');
+      } else {
+        const errorData = await response.json();
+        console.error('Error sending message:', errorData);
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -78,6 +108,16 @@ const Contact = ({ contact }) => {
             </div>
           </div>
           <form className="contact-form" onSubmit={handleSubmit}>
+            {submitStatus === 'success' && (
+              <div className="form-message success">
+                Message sent successfully! I'll get back to you soon.
+              </div>
+            )}
+            {submitStatus === 'error' && (
+              <div className="form-message error">
+                Failed to send message. Please try again or contact me directly via email.
+              </div>
+            )}
             <div className={`form-group ${focused.name ? 'focused' : ''}`}>
               <input 
                 type="text" 
@@ -88,6 +128,7 @@ const Contact = ({ contact }) => {
                 onBlur={() => handleBlur('name')}
                 placeholder="Your Name" 
                 required
+                disabled={isSubmitting}
               />
               <span className="input-highlight"></span>
             </div>
@@ -101,6 +142,7 @@ const Contact = ({ contact }) => {
                 onBlur={() => handleBlur('email')}
                 placeholder="Your Email" 
                 required
+                disabled={isSubmitting}
               />
               <span className="input-highlight"></span>
             </div>
@@ -114,6 +156,7 @@ const Contact = ({ contact }) => {
                 onBlur={() => handleBlur('subject')}
                 placeholder="Subject" 
                 required
+                disabled={isSubmitting}
               />
               <span className="input-highlight"></span>
             </div>
@@ -126,15 +169,18 @@ const Contact = ({ contact }) => {
                 onBlur={() => handleBlur('message')}
                 placeholder="Your Message"
                 required
+                disabled={isSubmitting}
               ></textarea>
               <span className="input-highlight"></span>
             </div>
-            <button type="submit" className="submit-button">
-              <span>Send Message</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="22" y1="2" x2="11" y2="13"></line>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-              </svg>
+            <button type="submit" className="submit-button" disabled={isSubmitting}>
+              <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+              {!isSubmitting && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              )}
             </button>
           </form>
         </div>
