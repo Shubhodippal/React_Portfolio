@@ -2,14 +2,8 @@ import React from 'react';
 import resumePDF from '../assets/Resume.pdf';
 
 const About = ({ data }) => {
-  const handleDownloadCV = () => {
-    // Create a link element
-    const link = document.createElement('a');
-    link.href = resumePDF;
-    link.download = 'Shubhodip_Pal_Resume.pdf'; // Name the downloaded file
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const handleViewResume = () => {
+    window.open(resumePDF, '_blank');
   };
 
   return (
@@ -22,8 +16,8 @@ const About = ({ data }) => {
         <div className="about-content">
           <div className="about-text">
             <p>{data.about}</p>
-            <button className="download-cv" onClick={handleDownloadCV}>
-              Download CV
+            <button className="download-cv" onClick={handleViewResume}>
+              View Resume
             </button>
           </div>
         </div>

@@ -13,6 +13,7 @@ import Footer from './components/Footer'
 import Publications from './components/Publications' 
 import Certifications from './components/Certifications' // Import Certifications component
 import nutrisift from './assets/nutrisift.jpg' // Import local image for NutriSift project
+import examspace from './assets/examspace.png'
 // Import theme provider
 import { ThemeProvider } from './context/ThemeContext'
 
@@ -24,7 +25,7 @@ function App() {
     name: "Shubhodip Pal",
     title: "Full-Stack Developer",
     tagline: "Building robust applications with clean, efficient code",
-    about: "Final-year Full-Stack Developer with a focus on Java, Spring Boot, MySQL, and React.js. Building projects involving RESTful APIs and interactive web interfaces. Comfortable with data structures and algorithms in Java and currently exploring machine learning to expand technical knowledge. Enthusiastic about clean code, backend efficiency, and continuous improvement.",
+    about: "Full-stack Software Developer with expertise in Java, Spring Boot, React, and RESTful APIs. Experienced in building scalable web applications with clean, maintainable code. Strong background in system architecture, data structures, and algorithms. Collaborative team player focused on delivering high-quality solutions in agile environments.",
     skills: [
       { name: "Java", level: 70 },
       { name: "JavaScript", level: 45 },
@@ -38,15 +39,6 @@ function App() {
     projects: [
       {
         id: 1,
-        title: "Speech Emotion Recognition",
-        description: "Developed a speech-emotion recognition system using the SUBESCO dataset and CNN, achieving 99.38% accuracy. Implemented efficient coding practices to handle large datasets and optimize model performance. This research was presented at the INDICON 2024 at IIT Kharagpur.",
-        technologies: "Python, CNN, Deep Learning, Signal Processing",
-        link: "https://github.com/Shubhodippal/Beyond_Words3.0.git",
-        website: "", // Add website link if available
-        image: "/project-images/speech-emotion.jpg" // Local image path
-      },
-      {
-        id: 2,
         title: "NutriSift",
         description: "Developed a React/Spring Boot recipe application that uses Cohere API for AI-powered recipe generation from available ingredients. Built core features including recipe discovery with filtering options, smart grocery list management, and restaurant map integration.",
         technologies: "React, Spring Boot, Cohere API, REST APIs",
@@ -55,7 +47,25 @@ function App() {
         image: nutrisift // Local image path
       },
       {
+        id: 2,
+        title: "Exam Space",
+        description: "Developed a secure online assessment platform with React and Spring Boot. Implemented features such as JWT/OTP authentication, exam creation and participation, AI-powered question generation (Cohere API), anti-cheating measures, and real-time analytics.",
+        technologies: "React, Spring Boot, Cohere API, REST APIs, Docker, MariaDB",
+        link: "https://github.com/Shubhodippal/Exam-Space-Public-Version.git",
+        website: "https://examspace.pages.dev/",
+        image: examspace // Local image path
+      },
+      {
         id: 3,
+        title: "Speech Emotion Recognition",
+        description: "Developed a speech-emotion recognition system using the SUBESCO dataset and CNN, achieving 99.38% accuracy. Implemented efficient coding practices to handle large datasets and optimize model performance. This research was presented at the INDICON 2024 at IIT Kharagpur.",
+        technologies: "Python, CNN, Deep Learning, Signal Processing",
+        link: "https://github.com/Shubhodippal/Beyond_Words3.0.git",
+        website: "", // Add website link if available
+        image: "/project-images/speech-emotion.jpg" // Local image path
+      },
+      {
+        id: 4,
         title: "Car Detection and Speed Estimation",
         description: "Created a system for detecting cars and estimating their speed using OpenCV and YOLO, leveraging frame-based tracking for accuracy.",
         technologies: "Python, OpenCV, YOLO, Computer Vision",
