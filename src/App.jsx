@@ -23,18 +23,20 @@ function App() {
   // Portfolio data
   const portfolioData = {
     name: "Shubhodip Pal",
-    title: "Full-Stack Developer",
+    title: "Java Developer",
     tagline: "Building robust applications with clean, efficient code",
-    about: "Full-stack Software Developer with expertise in Java, Spring Boot, React, and RESTful APIs. Experienced in building scalable web applications with clean, maintainable code. Strong background in system architecture, data structures, and algorithms. Collaborative team player focused on delivering high-quality solutions in agile environments.",
+    about: "Java Software Developer with expertise in Java, Spring Boot, React, and RESTful APIs. Experienced in building scalable web applications with clean, maintainable code. Strong background in system architecture, data structures, and algorithms. Collaborative team player focused on delivering high-quality solutions in agile environments.",
     skills: [
       { name: "Java", level: 70 },
-      { name: "JavaScript", level: 45 },
-      { name: "React.js", level: 45 },
-      { name: "Spring Boot", level: 62 },
-      { name: "MySQL", level: 60 },
-      { name: "Python", level: 68 },
-      { name: "Git/GitHub", level: 62 },
-      { name: "Data Structures & Algorithms", level: 65 }
+      { name: "JavaScript", level: 30 },
+      { name: "React.js", level: 30 },
+      { name: "Spring Boot", level: 60 },
+      { name: "MySQL", level: 45 },
+      { name: "Python", level: 50 },
+      { name: "Git/GitHub", level: 52 },
+      { name: "Data Structures & Algorithms", level: 62 },
+      { name: "Docker", level: 33 },
+      { name: "CI/CD", level: 33 }
     ],
     projects: [
       {
@@ -112,7 +114,7 @@ function App() {
         name: "Delta (Full Stack Web Development) - Apna College",
         issuer: "Apna College",
         date: "February 2024",
-        description: "Full-stack web development course covering modern frontend frameworks, backend technologies, and database integration.",
+        description: "Java web development course covering modern frontend frameworks, backend technologies, and database integration.",
         credentialUrl: "https://drive.google.com/file/d/1-0E9hOiw-aoq7wQnyMkYmKtXtSrIn5Dp/view?usp=sharing"
       },
       {
@@ -155,7 +157,7 @@ function App() {
           
           // Update page title based on active section
           const sectionTitles = {
-            'hero': `${portfolioData.name} | Full-Stack Developer`,
+            'hero': `${portfolioData.name} | Java Developer`,
             'about': `About - ${portfolioData.name}`,
             'skills': `Skills & Expertise - ${portfolioData.name}`,
             'projects': `Portfolio Projects - ${portfolioData.name}`,
@@ -191,24 +193,24 @@ function App() {
     <ThemeProvider>
       <>
         <Helmet>
-          <title>{portfolioData.name} | Full-Stack Developer Portfolio</title>
-          <meta name="description" content="Portfolio of Shubhodip Pal, a Full-Stack Developer specializing in Java, Spring Boot, MySQL, and React.js. View projects, skills, and certifications." />
-          <meta name="keywords" content="Shubhodip Pal, Full-Stack Developer, Java Developer, React Developer, Spring Boot, Portfolio, Web Development" />
+          <title>{portfolioData.name} | Java Developer Portfolio</title>
+          <meta name="description" content="Portfolio of Shubhodip Pal, a Java Developer specializing in Java, Spring Boot, MySQL, and React.js. View projects, skills, and certifications." />
+          <meta name="keywords" content="Shubhodip Pal, Java Developer, Java Developer, React Developer, Spring Boot, Portfolio, Web Development" />
           <meta name="author" content={portfolioData.name} />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           
           {/* Open Graph / Facebook */}
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://shubhodip.in/" />
-          <meta property="og:title" content={`${portfolioData.name} | Full-Stack Developer Portfolio`} />
-          <meta property="og:description" content="Portfolio of Shubhodip Pal, a Full-Stack Developer specializing in Java, Spring Boot, MySQL, and React.js." />
+          <meta property="og:title" content={`${portfolioData.name} | Java Developer Portfolio`} />
+          <meta property="og:description" content="Portfolio of Shubhodip Pal, a Java Developer specializing in Java, Spring Boot, MySQL, and React.js." />
           <meta property="og:image" content="https://shubhodip.in/thumbnail.jpg" />
           
           {/* Twitter */}
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:url" content="https://shubhodip.in/" />
-          <meta property="twitter:title" content={`${portfolioData.name} | Full-Stack Developer Portfolio`} />
-          <meta property="twitter:description" content="Portfolio of Shubhodip Pal, a Full-Stack Developer specializing in Java, Spring Boot, MySQL, and React.js." />
+          <meta property="twitter:title" content={`${portfolioData.name} | Java Developer Portfolio`} />
+          <meta property="twitter:description" content="Portfolio of Shubhodip Pal, a Java Developer specializing in Java, Spring Boot, MySQL, and React.js." />
           <meta property="twitter:image" content="https://shubhodip.in/thumbnail.jpg" />
           
           {/* Canonical URL */}

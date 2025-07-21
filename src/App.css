@@ -785,6 +785,22 @@ footer {
   }
 }
 
+/* Typing cursor animation */
+.typing-cursor {
+  animation: blink 1s infinite;
+  color: var(--primary-color);
+  font-weight: normal;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
 /* Responsive Adjustments */
 @media (max-width: 992px) {
   .hero-content {

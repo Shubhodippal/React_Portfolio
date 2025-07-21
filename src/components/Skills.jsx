@@ -8,8 +8,8 @@ const Skills = ({ skills, children }) => {
 
   // Function to convert percentage to skill level text
   const getSkillLevel = (percentage) => {
-    if (percentage >= 85) return "Advanced";
-    if (percentage >= 60) return "Intermediate";
+    if (percentage >= 75) return "Advanced";
+    if (percentage >= 35) return "Intermediate";
     return "Beginner";
   };
 
