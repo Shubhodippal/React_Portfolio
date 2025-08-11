@@ -51,8 +51,8 @@ function App() {
       {
         id: 2,
         title: "Exam Space",
-        description: "Developed a secure online assessment platform with React and Spring Boot. Implemented features such as JWT/OTP authentication, exam creation and participation, AI-powered question generation (Cohere API), anti-cheating measures, and real-time analytics.",
-        technologies: "React, Spring Boot, Cohere API, REST APIs, Docker, MariaDB",
+        description: "Developed a secure online assessment platform with React and Spring Boot. Implemented features such as JWT/OTP authentication, exam creation and participation, anti-cheating measures, classroom management and analytics.",
+        technologies: "React, Spring Boot, REST APIs, Docker, MariaDB",
         link: "https://github.com/Shubhodippal/Exam-Space-Public-Version.git",
         website: "https://examspace.pages.dev/",
         image: examspace // Local image path
