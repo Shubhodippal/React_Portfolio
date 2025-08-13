@@ -19,6 +19,17 @@ const Navigation = ({ activeSection, scrollToSection }) => {
           <ul className="nav-links">
             <li>
               <button 
+                className={activeSection === 'hero' ? 'active' : ''} 
+                onClick={() => {
+                  scrollToSection('hero');
+                  setIsMenuOpen(false);
+                }}
+              >
+                Home
+              </button>
+            </li>
+            <li>
+              <button 
                 className={activeSection === 'about' ? 'active' : ''} 
                 onClick={() => {
                   scrollToSection('about');
@@ -37,6 +48,17 @@ const Navigation = ({ activeSection, scrollToSection }) => {
                 }}
               >
                 Skills
+              </button>
+            </li>
+            <li>
+              <button 
+                className={activeSection === 'experience' ? 'active' : ''} 
+                onClick={() => {
+                  scrollToSection('experience');
+                  setIsMenuOpen(false);
+                }}
+              >
+                Experience
               </button>
             </li>
             <li>

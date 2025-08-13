@@ -11,6 +11,7 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Publications from './components/Publications' 
+import Experience from './components/Experience' // Import Experience component
 import Certifications from './components/Certifications' // Import Certifications component
 import nutrisift from './assets/nutrisift.jpg' // Import local image for NutriSift project
 import examspace from './assets/examspace.png'
@@ -25,7 +26,7 @@ function App() {
     name: "Shubhodip Pal",
     title: "Java Developer",
     tagline: "Building robust applications with clean, efficient code",
-    about: "Java Software Developer with expertise in Java, Spring Boot, React, and RESTful APIs. Experienced in building scalable web applications with clean, maintainable code. Strong background in system architecture, data structures, and algorithms. Collaborative team player focused on delivering high-quality solutions in agile environments.",
+    about: "Software Developer with expertise in Java, Spring Boot, and RESTful APIs. Experienced in building scalable web applications with clean, maintainable code. Strong background in system architecture, data structures, and algorithms. Collaborative team player focused on delivering high-quality solutions in agile environments.",
     skills: [
       { name: "Java", level: 70 },
       { name: "JavaScript", level: 30 },
@@ -133,6 +134,21 @@ function App() {
         doi: "10.1109/INDICON63790.2024.10958244",
         link: "https://doi.org/10.1109/INDICON63790.2024.10958244"
       }
+    ],
+    experiences: [
+      {
+        title: "Software Development Engineer Intern",
+        company: "Bluestock Fintech",
+        duration: "August 2025 - Present",
+        location: "Remote",
+        description: "Currently working as a Software Development Engineer Intern, contributing to developing innovative software solutions and gaining hands-on experience .",
+        /*achievements: [
+          "Working with modern development technologies and frameworks",
+          "Contributing to team projects and collaborative development processes",
+          "Learning industry best practices and software engineering methodologies"
+        ],
+        technologies: "Java, Spring Boot, React, RESTful APIs, Databases"*/
+      }
     ]
   }
   
@@ -160,6 +176,7 @@ function App() {
             'hero': `${portfolioData.name} | Java Developer`,
             'about': `About - ${portfolioData.name}`,
             'skills': `Skills & Expertise - ${portfolioData.name}`,
+            'experience': `Experience - ${portfolioData.name}`,
             'projects': `Portfolio Projects - ${portfolioData.name}`,
             'publications': `Publications - ${portfolioData.name}`,
             'certifications': `Certifications - ${portfolioData.name}`,
@@ -261,6 +278,11 @@ function App() {
         {/* Skills Component */}
         <Skills 
           skills={portfolioData.skills} 
+        />
+
+        {/* Experience Component */}
+        <Experience 
+          experiences={portfolioData.experiences}
         />
 
         {/* Projects Component */}

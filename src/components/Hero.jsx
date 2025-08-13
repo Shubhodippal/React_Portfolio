@@ -9,7 +9,7 @@ const Hero = ({ data, scrollToSection, children }) => {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
   
-  const titles = ['Backend Developer', 'Java Developer'];
+  const titles = ['Backend Developer', 'Java', 'Spring Boot', 'Docker', 'Google Cloud', 'AWS'];
   
   useEffect(() => {
     const currentTitle = titles[currentTitleIndex];
