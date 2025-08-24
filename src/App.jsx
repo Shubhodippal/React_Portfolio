@@ -55,7 +55,7 @@ function App() {
         description: "Developed a secure online assessment platform with React and Spring Boot. Implemented features such as JWT/OTP authentication, exam creation and participation, anti-cheating measures, classroom management and analytics.",
         technologies: "React, Spring Boot, REST APIs, Docker, MariaDB",
         link: "https://github.com/Shubhodippal/Exam-Space-Public-Version.git",
-        website: "https://examspace.pages.dev/",
+        website: "https://examspace.in/",
         image: examspace // Local image path
       },
       {
