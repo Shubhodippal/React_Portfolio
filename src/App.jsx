@@ -15,6 +15,7 @@ import Experience from './components/Experience' // Import Experience component
 import Certifications from './components/Certifications' // Import Certifications component
 import nutrisift from './assets/nutrisift.jpg' // Import local image for NutriSift project
 import examspace from './assets/examspace.png'
+import quizmaker from './assets/quiz_maker.png' // Import local image for Quiz Maker project
 // Import theme provider
 import { ThemeProvider } from './context/ThemeContext'
 
@@ -60,6 +61,15 @@ function App() {
       },
       {
         id: 3,
+        title: "Quiz Maker",
+        description: "Built a real-time quiz application using modern web technologies. Features include dynamic quiz creation, real-time participation, instant scoring, and interactive user experience. Deployed using Cloudflare Workers for optimal performance and global accessibility.",
+        technologies: "JavaScript, Cloudflare Workers, HTML/CSS, Real-time APIs",
+        link: "https://github.com/Shubhodippal/Quiz_Maker.git",
+        website: "https://realtime-quiz-worker.shubhodippal01.workers.dev/",
+        image: quizmaker // Local image path
+      },
+      {
+        id: 4,
         title: "Speech Emotion Recognition",
         description: "Developed a speech-emotion recognition system using the SUBESCO dataset and CNN, achieving 99.38% accuracy. Implemented efficient coding practices to handle large datasets and optimize model performance. This research was presented at the INDICON 2024 at IIT Kharagpur.",
         technologies: "Python, CNN, Deep Learning, Signal Processing",
@@ -68,7 +78,7 @@ function App() {
         image: "/project-images/speech-emotion.jpg" // Local image path
       },
       {
-        id: 4,
+        id: 5,
         title: "Car Detection and Speed Estimation",
         description: "Created a system for detecting cars and estimating their speed using OpenCV and YOLO, leveraging frame-based tracking for accuracy.",
         technologies: "Python, OpenCV, YOLO, Computer Vision",
