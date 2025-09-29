@@ -16,6 +16,7 @@ import Certifications from './components/Certifications' // Import Certification
 import nutrisift from './assets/nutrisift.jpg' // Import local image for NutriSift project
 import examspace from './assets/examspace.png'
 import quizmaker from './assets/quiz_maker.png' // Import local image for Quiz Maker project
+import pujoexplorer from './assets/pujo_explorer.png' // Import local image for Pujo Explorer project
 // Import theme provider
 import { ThemeProvider } from './context/ThemeContext'
 
@@ -70,6 +71,15 @@ function App() {
       },
       {
         id: 4,
+        title: "Pujo Explorer Kolkata",
+        description: "A smarter way to celebrate Durga Puja in Kolkata. Maps 1200+ puja locations with smart path-finding for seamless pandal-hopping. Features include exploring by region, detailed puja information, and faster navigation across the city. Blending tradition with technology for an enhanced Durga Puja experience.",
+        technologies: "Web Technologies, Mapping APIs, Path-finding Algorithms, JavaScript",
+        link: "https://github.com/Shubhodippal/Pujo_Explorer_Kolkata", // Add GitHub link if available
+        website: "https://pujo-explorer-kolkata.vercel.app/",
+        image: pujoexplorer // Local image path
+      },
+      {
+        id: 5,
         title: "Speech Emotion Recognition",
         description: "Developed a speech-emotion recognition system using the SUBESCO dataset and CNN, achieving 99.38% accuracy. Implemented efficient coding practices to handle large datasets and optimize model performance. This research was presented at the INDICON 2024 at IIT Kharagpur.",
         technologies: "Python, CNN, Deep Learning, Signal Processing",
@@ -78,7 +88,7 @@ function App() {
         image: "/project-images/speech-emotion.jpg" // Local image path
       },
       {
-        id: 5,
+        id: 6,
         title: "Car Detection and Speed Estimation",
         description: "Created a system for detecting cars and estimating their speed using OpenCV and YOLO, leveraging frame-based tracking for accuracy.",
         technologies: "Python, OpenCV, YOLO, Computer Vision",
