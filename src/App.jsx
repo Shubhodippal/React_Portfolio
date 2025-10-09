@@ -157,6 +157,13 @@ function App() {
     ],
     experiences: [
       {
+        "title": "Software Development Engineer Intern",
+        "company": "Alpha Torana Private Limited",
+        "duration": "October 2025 - Present",
+        "location": "Remote",
+        "description": "Currently working as an Intern Developer at Alpha Torana Private Limited, contributing to the development of scalable software solutions and participating in real-world projects that enhance both technical and collaborative skills."
+      },
+      {
         title: "Software Development Engineer Intern",
         company: "Bluestock Fintech",
         duration: "August 2025 - Present",
