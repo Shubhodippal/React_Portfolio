@@ -166,9 +166,9 @@ function App() {
       {
         title: "Software Development Engineer Intern",
         company: "Bluestock Fintech",
-        duration: "August 2025 - Present",
+        duration: "August 2025 - September 2025",
         location: "Remote",
-        description: "Currently working as a Software Development Engineer Intern, contributing to developing innovative software solutions and gaining hands-on experience .",
+        description: "Worked as a Software Development Engineer Intern, contributing to developing innovative software solutions and gaining hands-on experience.",
         /*achievements: [
           "Working with modern development technologies and frameworks",
           "Contributing to team projects and collaborative development processes",
