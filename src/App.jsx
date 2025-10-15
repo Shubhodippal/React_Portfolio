@@ -157,7 +157,7 @@ function App() {
     ],
     experiences: [
       {
-        "title": "Software Development Engineer Intern",
+        "title": "Intern Developer",
         "company": "Alpha Torana Private Limited",
         "duration": "October 2025 - Present",
         "location": "Remote",
