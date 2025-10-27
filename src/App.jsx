@@ -242,6 +242,8 @@ function App() {
           <meta name="keywords" content="Shubhodip Pal, Java Developer, Java Developer, React Developer, Spring Boot, Portfolio, Web Development" />
           <meta name="author" content={portfolioData.name} />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+          <meta name="googlebot" content="index, follow" />
           
           {/* Open Graph / Facebook */}
           <meta property="og:type" content="website" />
@@ -249,6 +251,8 @@ function App() {
           <meta property="og:title" content={`${portfolioData.name} | Java Developer Portfolio`} />
           <meta property="og:description" content="Portfolio of Shubhodip Pal, a Java Developer specializing in Java, Spring Boot, MySQL, and React.js." />
           <meta property="og:image" content="https://shubhodip.in/thumbnail.jpg" />
+          <meta property="og:site_name" content="Shubhodip Pal Portfolio" />
+          <meta property="og:locale" content="en_US" />
           
           {/* Twitter */}
           <meta property="twitter:card" content="summary_large_image" />
@@ -263,12 +267,13 @@ function App() {
           {/* Structured Data - Person */}
           <script type="application/ld+json">
             {JSON.stringify({
-              "@context": "http://schema.org",
+              "@context": "https://schema.org",
               "@type": "Person",
               "name": portfolioData.name,
               "jobTitle": portfolioData.title,
               "description": portfolioData.about,
               "email": portfolioData.contact.email,
+              "url": "https://shubhodip.in",
               "sameAs": [
                 portfolioData.contact.github,
                 portfolioData.contact.linkedin
@@ -277,6 +282,21 @@ function App() {
               "alumniOf": {
                 "@type": "EducationalOrganization",
                 "name": portfolioData.education.institution
+              }
+            })}
+          </script>
+
+          {/* Structured Data - WebSite */}
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Shubhodip Pal Portfolio",
+              "url": "https://shubhodip.in",
+              "description": "Portfolio website showcasing projects, skills, and experience of Shubhodip Pal, a Java Developer",
+              "author": {
+                "@type": "Person",
+                "name": portfolioData.name
               }
             })}
           </script>
