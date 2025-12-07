@@ -37,7 +37,7 @@ const Contact = ({ contact }) => {
     setSubmitStatus(null);
     
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/users/send_mail`, {
+      const response = await fetch(`https://exam.shubhodip.in/users/send_mail`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
