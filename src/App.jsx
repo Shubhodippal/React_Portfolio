@@ -62,11 +62,11 @@ function App() {
       },
       {
         id: 3,
-        title: "Quiz Maker",
+        title: "Quiz Space",
         description: "Built a real-time quiz application using modern web technologies. Features include dynamic quiz creation, real-time participation, instant scoring, and interactive user experience. Deployed using Cloudflare Workers for optimal performance and global accessibility.",
-        technologies: "JavaScript, Cloudflare Workers, HTML/CSS, Real-time APIs",
-        link: "https://github.com/Shubhodippal/Quiz_Maker.git",
-        website: "https://realtime-quiz-worker.shubhodippal01.workers.dev/",
+        technologies: "Cloudflare Workers, React, WebSockets, REST APIs",
+        link: "https://github.com/Shubhodippal/Quiz.git",
+        website: "https://quiz.examspace.in/",
         image: quizmaker // Local image path
       },
       {
